@@ -1,21 +1,30 @@
 {
-  "name": "movies_query",
+  "name": "movies_db",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview"
   },
   "dependencies": {
+    "axios": "^0.24.0",
     "vue": "3.2.20"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/vue": "^6.4.2",
     "@vitejs/plugin-vue": "1.9.3",
     "autoprefixer": "10.3.7",
+    "msw": "^0.35.0",
     "postcss": "8.3.11",
+    "sass": "^1.43.3",
     "tailwindcss": "2.2.17",
     "typescript": "4.4.4",
     "vite": "2.6.10",
+    "vite-tsconfig-paths": "^3.3.17",
     "vue-tsc": "0.28.7"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }

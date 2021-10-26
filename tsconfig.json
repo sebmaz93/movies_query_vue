@@ -12,10 +12,14 @@
     "lib": ["esnext", "dom"],
     "baseUrl": ".",
     "paths": {
+      "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
       "@services/*": ["src/_services/*"],
-      "@types/*": ["src/_types/*"]
+      "@data/*": ["src/data/*"],
+      "@types/*": ["src/_types/*"],
+      "@mocks/*": ["src/mocks/*"],
+      "@utils/*": ["src/_utils/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "exclude": ["node_modules", "dist"]
 }
