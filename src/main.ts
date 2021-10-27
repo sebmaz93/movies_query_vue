@@ -8,6 +8,8 @@ import App from './App.vue';
 // styles
 import './index.css';
 
-worker.start();
+worker.start({
+  onUnhandledRequest: 'bypass',
+});
 
 createApp(App).mount('#app');

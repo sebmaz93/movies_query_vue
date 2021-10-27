@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Main from '@/components/Main.vue'
+import Main from '@components/Main.vue'
 </script>
 
 <template>
@@ -13,8 +13,8 @@ import Main from '@/components/Main.vue'
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #f3f3f3;
-  padding: 24px;
-  background-color: #1e1e1e;
+  padding: 100px 24px 24px;
   min-height: 100vh;
+  position: relative;
 }
 </style>

@@ -8,17 +8,16 @@
   },
   "dependencies": {
     "axios": "^0.24.0",
-    "vue": "3.2.20"
+    "vue": "3.2.20",
+    "msw": "^0.35.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/vue": "^6.4.2",
     "@vitejs/plugin-vue": "1.9.3",
     "autoprefixer": "10.3.7",
-    "msw": "^0.35.0",
     "postcss": "8.3.11",
     "sass": "^1.43.3",
-    "tailwindcss": "2.2.17",
     "typescript": "4.4.4",
     "vite": "2.6.11",
     "vue-tsc": "0.28.8"

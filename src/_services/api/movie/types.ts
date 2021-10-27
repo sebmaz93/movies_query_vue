@@ -4,7 +4,7 @@ export interface Movie {
   img: string;
   genre: { id: number; title: string }[];
   actors: { id: number; name: string }[];
-  release_date: string;
+  release_date: number;
   is_series: boolean;
 }
 
@@ -20,8 +20,9 @@ export interface MovieReqParams {
   page?: number;
   per_page?: number;
   filters?: {
-    genres?: number[];
-    years?: number[];
-    actors?: number[];
+    searchTerm?: string;
+    genre?: number;
+    year?: number;
+    isSeries?: boolean;
   };
 }

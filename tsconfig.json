@@ -15,10 +15,9 @@
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
       "@services/*": ["src/_services/*"],
-      "@data/*": ["src/data/*"],
-      "@types/*": ["src/_types/*"],
       "@mocks/*": ["src/mocks/*"],
-      "@utils/*": ["src/_utils/*"]
+      "@utils/*": ["src/_utils/*"],
+      "@hooks/*": ["src/hooks/*"]
     }
   },
   "exclude": ["node_modules", "dist"]

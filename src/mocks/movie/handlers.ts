@@ -2,9 +2,10 @@ import { rest } from 'msw';
 
 import { getAllMoviesResolver } from './resolvers';
 
-import { MoviesRes } from './types';
+// types
+import { MoviesRes } from '@services/api/movie/types';
 
 // serving as a mock handler for the api
 export const moviesHandlers = [
-  rest.get<MoviesRes>('/movies', getAllMoviesResolver),
+  rest.post<MoviesRes>('/api/movies', getAllMoviesResolver),
 ];

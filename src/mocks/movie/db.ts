@@ -24,7 +24,7 @@ export const movies = [
       },
     ],
     is_series: false,
-    release_date: '2010-11-17T00:00:00.000000Z',
+    release_date: 2010,
   },
   {
     id: 2,
@@ -51,7 +51,7 @@ export const movies = [
       },
     ],
     is_series: false,
-    release_date: '2004-06-25T00:00:00.000000Z',
+    release_date: 2004,
   },
   {
     id: 3,
@@ -78,7 +78,7 @@ export const movies = [
       },
     ],
     is_series: false,
-    release_date: '1972-06-25T00:00:00.000000Z',
+    release_date: 1972,
   },
   {
     id: 4,
@@ -105,7 +105,7 @@ export const movies = [
       },
     ],
     is_series: false,
-    release_date: '2006-06-25T00:00:00.000000Z',
+    release_date: 2006,
   },
   {
     id: 5,
@@ -132,7 +132,7 @@ export const movies = [
       },
     ],
     is_series: false,
-    release_date: '2014-11-17T00:00:00.000000Z',
+    release_date: 2014,
   },
   {
     id: 6,
@@ -159,7 +159,7 @@ export const movies = [
       },
     ],
     is_series: true,
-    release_date: '2004-06-25T00:00:00.000000Z',
+    release_date: 2004,
   },
   {
     id: 7,
@@ -186,7 +186,7 @@ export const movies = [
       },
     ],
     is_series: true,
-    release_date: '2015-06-25T00:00:00.000000Z',
+    release_date: 2015,
   },
   {
     id: 8,
@@ -213,7 +213,7 @@ export const movies = [
       },
     ],
     is_series: false,
-    release_date: '2010-11-17T00:00:00.000000Z',
+    release_date: 2010,
   },
   {
     id: 9,
@@ -240,7 +240,7 @@ export const movies = [
       },
     ],
     is_series: false,
-    release_date: '2004-06-25T00:00:00.000000Z',
+    release_date: 2004,
   },
   {
     id: 10,
@@ -267,7 +267,7 @@ export const movies = [
       },
     ],
     is_series: false,
-    release_date: '1972-06-25T00:00:00.000000Z',
+    release_date: 1972,
   },
   {
     id: 114,
@@ -294,7 +294,7 @@ export const movies = [
       },
     ],
     is_series: false,
-    release_date: '2006-06-25T00:00:00.000000Z',
+    release_date: 2006,
   },
   {
     id: 115,
@@ -321,7 +321,7 @@ export const movies = [
       },
     ],
     is_series: false,
-    release_date: '2014-11-17T00:00:00.000000Z',
+    release_date: 2014,
   },
   {
     id: 116,
@@ -348,7 +348,7 @@ export const movies = [
       },
     ],
     is_series: true,
-    release_date: '2004-06-25T00:00:00.000000Z',
+    release_date: 2004,
   },
   {
     id: 117,
@@ -375,6 +375,6 @@ export const movies = [
       },
     ],
     is_series: true,
-    release_date: '2015-06-25T00:00:00.000000Z',
+    release_date: 2015,
   },
 ];

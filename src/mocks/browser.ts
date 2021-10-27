@@ -1,6 +1,6 @@
 import { setupWorker } from 'msw';
 
-import { moviesHandlers } from '@services/api/movie/handlers';
+import { moviesHandlers } from './movie/handlers';
 
 const handlers = [...moviesHandlers];
 
