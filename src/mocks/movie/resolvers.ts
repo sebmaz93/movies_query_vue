@@ -2,10 +2,15 @@
 import { movies } from './db';
 
 // types
+import type { RestRequest, ResponseComposition, RestContext } from 'msw';
 import { MovieReqParams } from '@services/api/movie/types';
 
-export const getAllMoviesResolver = (req, res, ctx) => {
-  const { filters, page = 1, per_page = 6 } = req.body as MovieReqParams;
+export const getAllMoviesResolver = (
+  req: RestRequest,
+  res: ResponseComposition,
+  ctx: RestContext,
+) => {
+  const { filters, page = 1, per_page = 8 } = req.body as MovieReqParams;
   let filteredMovies = movies;
 
   if (filters) {
@@ -40,5 +45,5 @@ export const getAllMoviesResolver = (req, res, ctx) => {
     total_results: filteredMovies.length,
   };
 
-  return res(ctx.delay(), ctx.status(200), ctx.json(structuredRes));
+  return res(ctx.delay(1000), ctx.status(200), ctx.json(structuredRes));
 };
