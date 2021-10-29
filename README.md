@@ -1,11 +1,41 @@
-# Vue 3 + Typescript + Vite
+# Movies DB
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Techstack [vue 3](https://v3.vuejs.org/) + [vitejs](https://vitejs.dev/) + [Typescript](https://www.typescriptlang.org/)
 
-## Recommended IDE Setup
+Mocking [MSW](https://mswjs.io/)
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+Testing: [Jest](https://jestjs.io/) + [testing library](https://testing-library.com/docs/vue-testing-library/intro/)
 
-## Type Support For `.vue` Imports in TS
+## Getting started
+1. clone the repo
+2. install deps `npm i`
+3. run `npm start`
+4. visit [localhost:3000](http://localhost:3000/) in ur browser
+5. you can see the app! 🎉
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+## How to use the app
+1. at first there won't be any movies
+2. click search without any input to see the default movies
+3. type a movie name and search with keyword
+4. set filters and search again
+5. pressing next / prev paginations will query the next/prev page
+
+## scripts
+
+`npm start`  start dev server
+
+`npm build`  build for production
+
+`npm run serve` start prod preview after build
+
+`npm run lint`  lint the project
+
+`npm run lint:fix`  lint the project and fixing issues
+
+`npm test` run unit tests
+
+`npm run test:w` run unit tests in watch mode
+
+`npm run test:coverage` run unit tests and generate coverage report
+
+`npm run format` format the code with prettier
