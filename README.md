@@ -1,3 +1,7 @@
+[![Deploy](https://github.com/sebmaz93/movies_query_vue/actions/workflows/deploy.yml/badge.svg)](https://github.com/sebmaz93/movies_query_vue/actions/workflows/deploy.yml)
+[![Lint and Format](https://github.com/sebmaz93/movies_query_vue/actions/workflows/lint.yml/badge.svg)](https://github.com/sebmaz93/movies_query_vue/actions/workflows/lint.yml)
+[![Test](https://github.com/sebmaz93/movies_query_vue/actions/workflows/test.yml/badge.svg)](https://github.com/sebmaz93/movies_query_vue/actions/workflows/test.yml)
+
 # Movies DB
 
 Techstack [vue 3](https://v3.vuejs.org/) + [vitejs](https://vitejs.dev/) + [Typescript](https://www.typescriptlang.org/)
