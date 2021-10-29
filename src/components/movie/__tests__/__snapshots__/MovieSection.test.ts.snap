@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render MoviesSection should not have movie in the list 1`] = `Array []`;
+
+exports[`Render MoviesSection should show loader then have movies in list 1`] = `Array []`;

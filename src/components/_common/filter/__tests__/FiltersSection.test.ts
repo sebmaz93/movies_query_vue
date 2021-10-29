@@ -1,38 +1,45 @@
 import { render, fireEvent } from '@testing-library/vue';
-import Filter from '../Filter.vue';
+import FiltersSection from '../FiltersSection.vue';
+import { nextTick } from 'vue';
 
-const renderFilter = (
-  label: string,
-  modelValue: number | null,
-  filters: { value: number; text: string }[] = [
-    { value: 1, text: 'one' },
-    { value: 2, text: 'two' },
-  ]
-) =>
-  render(Filter, {
-    props: {
-      label,
-      modelValue,
-      filters,
-    },
+describe('Render FiltersSection', () => {
+  beforeEach(() => jest.clearAllMocks());
+
+  it('should disable next button when no next page', async () => {
+    const { getByTestId } = render(FiltersSection, {
+      props: { hasNext: false, getMovies: jest.fn() },
+    });
+
+    expect(getByTestId('next-btn')).toBeDisabled();
   });
 
-describe('Render FilterSelect', () => {
-  it('should have 2 options', () => {
-    const { getByTestId } = renderFilter('genre', null);
+  it('should call the fn on click search', async () => {
+    const mockFn = jest
+      .fn()
+      .mockImplementation(() => new Promise((resolve) => resolve({ data: {} })));
 
-    expect(getByTestId('filter-select').firstChild).toHaveTextContent('genre');
-    expect(getByTestId('filter-select')).toHaveValue('');
+    const { getByTestId } = render(FiltersSection, {
+      props: { hasNext: true, getMovies: mockFn },
+    });
+
+    fireEvent.click(getByTestId('search-btn'));
+    await nextTick();
+
+    expect(mockFn).toHaveBeenCalled();
   });
 
-  it('should select the desired option', async () => {
-    const { getByTestId, emitted } = renderFilter('genre', null);
+  it('should call the fn on page change', async () => {
+    const mockFn = jest
+      .fn()
+      .mockImplementation(() => new Promise((resolve) => resolve({ data: {} })));
 
-    expect(getByTestId('filter-select').firstChild).toHaveTextContent('genre');
+    const { getByTestId } = render(FiltersSection, {
+      props: { hasNext: true, getMovies: mockFn },
+    });
 
-    fireEvent.change(getByTestId('filter-select'), { target: { value: 2 } });
+    fireEvent.click(getByTestId('next-btn'));
+    await nextTick();
 
-    expect(emitted()['update:modelValue']).toEqual([[2]]);
-    expect(getByTestId('filter-select')).toHaveValue('2');
+    expect(mockFn).toHaveBeenCalled();
   });
 });

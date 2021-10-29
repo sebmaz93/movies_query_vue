@@ -66,9 +66,9 @@ watch([page, perPage], handleFetch);
       <CheckboxComponent v-model="isSeries" label="Series" />
     </div>
     <div class="pagination">
-      <button :disabled="page === 1" @click="handlePrev">Prev</button>
+      <button :disabled="page === 1" data-test-id="prev-btn" @click="handlePrev">Prev</button>
       <p class="page">page: {{ page }}</p>
-      <button :disabled="!hasNext" @click="handleNext">Next</button>
+      <button :disabled="!hasNext" data-test-id="next-btn" @click="handleNext">Next</button>
     </div>
   </div>
 </template>

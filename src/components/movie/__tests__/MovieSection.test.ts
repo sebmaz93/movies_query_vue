@@ -7,7 +7,7 @@ describe('Render MoviesSection', () => {
   beforeEach(() => jest.clearAllMocks());
 
   it('should not have movie in the list', async () => {
-    const { getByTestId } = render(MovieSection);
+    const { queryByTestId } = render(MovieSection);
     const api = jest.spyOn(moviesApi, 'fetchMovies').mockImplementation(
       () =>
         new Promise((resolve) =>
@@ -43,10 +43,7 @@ describe('Render MoviesSection', () => {
         )
     );
 
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    await nextTick();
-
-    expect(getByTestId('movies-container')).not.toBeInTheDocument();
+    expect(queryByTestId('movies-container')).not.toBeInTheDocument();
     expect(api.mock.calls).toMatchSnapshot();
   });
 
@@ -88,6 +85,9 @@ describe('Render MoviesSection', () => {
     const { getByTestId } = render(MovieSection);
 
     fireEvent.click(getByTestId('search-btn'));
+    await nextTick();
+
+    expect(getByTestId('loader')).toBeInTheDocument();
 
     await new Promise((resolve) => setTimeout(resolve, 1500));
     await nextTick();
