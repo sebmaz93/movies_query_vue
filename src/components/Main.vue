@@ -1,8 +1,7 @@
 <script setup lang="ts">
 // components
-import Nav from '@components/_common/nav/Nav.vue'
-import MovieSection from '@components/movie/MovieSection.vue'
-
+import Nav from '@components/_common/nav/Nav.vue';
+import MovieSection from '@components/movie/MovieSection.vue';
 </script>
 
 <template>

@@ -8,32 +8,26 @@ import { MovieReqParams } from '@services/api/movie/types';
 export const getAllMoviesResolver = (
   req: RestRequest,
   res: ResponseComposition,
-  ctx: RestContext,
+  ctx: RestContext
 ) => {
   const { filters, page = 1, per_page = 8 } = req.body as MovieReqParams;
   let filteredMovies = movies;
 
   if (filters) {
-    filteredMovies = movies.filter(movie => {
+    filteredMovies = movies.filter((movie) => {
       if (filters.year && movie.release_date !== filters.year) return false;
-      if (filters.genre && movie.genre.every(({ id }) => id !== filters.genre))
-        return false;
+      if (filters.genre && movie.genre.every(({ id }) => id !== filters.genre)) return false;
       if (
         filters.searchTerm &&
-        movie.title.toLowerCase().indexOf(filters.searchTerm.toLowerCase()) ===
-          -1
+        movie.title.toLowerCase().indexOf(filters.searchTerm.toLowerCase()) === -1
       )
         return false;
-      if (filters.isSeries && movie.is_series !== filters.isSeries)
-        return false;
+      if (filters.isSeries && movie.is_series !== filters.isSeries) return false;
       return true;
     });
   }
 
-  const slicedMovies = filteredMovies.slice(
-    (page - 1) * per_page,
-    page * per_page,
-  );
+  const slicedMovies = filteredMovies.slice((page - 1) * per_page, page * per_page);
   const total_pages = Math.ceil(filteredMovies.length / per_page);
   const has_next_page = page < total_pages;
 
