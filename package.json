@@ -16,7 +16,7 @@
   "dependencies": {
     "axios": "^0.24.0",
     "msw": "^0.35.0",
-    "vue": "3.2.20"
+    "vue": "3.2.21"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.14.1",
