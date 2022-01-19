@@ -44,7 +44,7 @@
     "ts-jest": "^27.0.7",
     "typescript": "4.5.4",
     "vite": "2.7.13",
-    "vue-tsc": "0.30.5"
+    "vue-tsc": "0.30.6"
   },
   "husky": {
     "hooks": {
