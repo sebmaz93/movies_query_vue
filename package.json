@@ -14,7 +14,7 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
-    "axios": "0.27.2",
+    "axios": "1.5.1",
     "msw": "0.49.3",
     "vue": "3.3.4"
   },
